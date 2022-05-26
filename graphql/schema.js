@@ -16,7 +16,10 @@ const {} = require("./mutations");
 const QueryType = new GraphQLObjectType({
   name: "Query",
   description: "Root Query",
-  fields: () => ({}),
+  fields: () => ({
+    //...queries
+    
+  }),
 });
 //Import mutationType
 const MutationType = new GraphQLObjectType({

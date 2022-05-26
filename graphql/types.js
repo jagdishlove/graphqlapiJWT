@@ -2,7 +2,6 @@ const {
   GraphQLObjectType,
   GraphQLString,
   GraphQLList,
-  GraphQLInt,
   GraphQLID,
 } = require("graphql");
 
@@ -19,6 +18,9 @@ const UserType = new GraphqlObjectType({
     displayName: { type: GraphQLString },
   }),
 });
+
+//PostType
+
 const PostType = new GraphqlObjectType({
   name: "Post",
   description: "Post Type",
@@ -29,7 +31,7 @@ const PostType = new GraphqlObjectType({
     auther: {
       type: UserType,
       resolve(parent, args) {
-        return User.findById(parent.autherId);
+        return User.findById({ autherId: parent.id });
       },
     },
     comments: {
