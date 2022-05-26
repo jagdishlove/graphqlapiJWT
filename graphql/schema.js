@@ -10,7 +10,7 @@ const {
 const {} = require("./queries");
 
 //Import mutations
-const {} = require("./mutation");
+const {} = require("./mutations");
 
 //Import queryTypea
 const QueryType = new GraphQLObjectType({
