@@ -7,7 +7,7 @@ const {
 
 const { User, Post, Comment } = require("../models");
 
-const UserType = new GraphqlObjectType({
+const UserType = new GraphQLObjectType({
   name: "User",
   description: "User Type",
   fields: () => ({
@@ -21,7 +21,7 @@ const UserType = new GraphqlObjectType({
 
 //PostType
 
-const PostType = new GraphqlObjectType({
+const PostType = new GraphQLObjectType({
   name: "Post",
   description: "Post Type",
   fields: () => ({
@@ -43,7 +43,7 @@ const PostType = new GraphqlObjectType({
   }),
 });
 
-const CommentType = new GraphqlObjectType({
+const CommentType = new GraphQLObjectType({
   name: "Comments",
   description: "Comment type",
   fields: () => ({
